@@ -2,7 +2,6 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 const session = require('express-session');
-// const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
 
