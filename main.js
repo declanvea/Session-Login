@@ -32,10 +32,7 @@ app.use((req, res, next) => {
   }
   next();
 });
-//
-// app.use((err, req, res, next) => {
-//   res.redirect('/');
-// });
+
 
 
 app.get('/', (req, res) =>{
@@ -51,11 +48,9 @@ app.get('/', (req, res) =>{
 
 app.post('/login/', (req, res) => {
   var html = `
-    <marquee behavior="scroll" direction="left">
-    <img src="http://www.html.am/images/html-codes/marquees/fish-swimming.gif" alt="Swimming fish">LOGIN DUDE!
-    </marquee>
     <h1>App Login:</h1>
-    <h4>Please login for access:</h4><br>
+    <img src="https://media.giphy.com/media/3owyoUHuSSqDMEzVRu/giphy.gif" alt="Office Space"> 
+    <h4>"Uh...yeah...I'm gonna need you to login..."</h4><br>
     <form action ="/" method="post">
     <input type="text" name="username" placeholder="username" label="Username:"><br><br>
     <input type="password" name="password" placeholder="password" label="password"><br><br>
@@ -93,11 +88,13 @@ app.post('/login/', (req, res) => {
 
 app.post('/', (req, res) =>{
 var html =
-  `<h1>Welcome to App</h1>
-  <img src="https://media.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" alt="cat"><br>
-  <form action ="/" method="post">
+  `
+  <form action ="/" method="get">
   <button type="logout">Logout</button>
-  </form>`
+  </form>
+  <h1>My Stapler App</h1>
+  <img src="https://media.giphy.com/media/3o84U5xPhrn42WgBJC/giphy.gif" alt="Stapler"><br>
+  `
   res.send(html);
 });
 
